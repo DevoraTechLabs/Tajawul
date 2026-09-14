@@ -1,0 +1,32 @@
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: flex;
+  padding: 8px 16px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 38px;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+  color: var(--Neutrals-Black-Text);
+  border: 1px solid var(--Neutrals-Light-Outline);
+  background: var(--Beige-Very-Bright);
+}
+
+.icon {
+  font-size: 20px !important;
+  color: var(--Neutrals-Black-Text);
+}
+
+.tagText {
+  white-space: nowrap;
+}

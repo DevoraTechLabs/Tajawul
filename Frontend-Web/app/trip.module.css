@@ -1,0 +1,1132 @@
+.coverWrapper {
+  width: 100vw;
+  max-height: 480px;
+  position: relative;
+}
+
+.tripCover {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tripCover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(
+    --Image-Overlay,
+    linear-gradient(
+      180deg,
+      rgba(34, 26, 20, 0) 44.2%,
+      rgba(34, 26, 20, 0.85) 88.17%
+    )
+  );
+  z-index: 1;
+}
+
+.tripCover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.coverContent {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  z-index: 2;
+  margin-top: 80px;
+  padding-bottom: 26px;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.tripTitle {
+  color: var(--Neutrals-Background, #fffbf4);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+  text-align: left;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.metaInfo {
+  display: flex;
+  gap: 8px;
+  color: var(--Neutrals-Background, #fffbf4);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  margin-left: 8px;
+}
+
+.priceRange,
+.tripDuration,
+.status {
+  text-transform: capitalize;
+}
+
+.saveButton {
+  display: flex;
+  height: 40px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 24px;
+  background: var(--Neutrals-Background, #fffbf4);
+  color: var(--Neutrals-Black-Text, #221a14);
+  text-align: right;
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  border: 1px solid var(--Neutrals-Background);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background: var(--Green-Very-Bright);
+  border: 1px solid var(--Green-Hover);
+  color: var(--Green-Dark);
+}
+
+.activeButton {
+  background: var(--Green-Hover);
+  color: var(--Neutrals-Background);
+  border: 1px solid var(--Green-Hover);
+}
+
+.buttomContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+.buttomRightContainer {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+}
+
+.buttomRightContainer .cameraButton {
+  padding: 0;
+  width: 40px;
+  border-radius: 50%;
+  order: -1;
+  margin-right: 8px;
+}
+
+.mainContent {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: 98vw;
+  margin: 24px auto;
+  padding: 0 4%;
+}
+
+.leftColumn {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightColumn {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px 32px;
+  border-radius: 24px;
+  border: 1.5px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  background: var(--Neutrals-Background, #fffbf4);
+  gap: 16px; /* Adds consistent spacing between all children (e.g., h2 and content) */
+}
+
+.section h2 {
+  padding: 0;
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: left;
+}
+
+/* In trip.module.css */
+.description {
+  text-align: left;
+  color: var(--Neutrals-Dark-Outline, #2d2d2d);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin-top: 18px; /* Add space below the "About" heading */
+}
+
+.statsContainer {
+  display: flex;
+  padding: 0px 24px;
+  justify-content: space-around;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.contributersList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-top: 20px; /* Add space below the "Contributors" heading */
+}
+
+.contributerItem {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  gap: 8px; /* Space between avatar and text */
+  padding: 4px 0;
+}
+.contributerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align text */
+  gap: 4px; /* Space between "Created by" and name */
+}
+
+.contributerLabel {
+color: var(--Neutrals-Black-Text, #221a14);
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 6px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.contributerName {
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 0;
+  margin: 0;
+}
+.clonedByContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.clonedByAvatars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.moreClones {
+  color: var(--Neutrals-Medium-Text, #837468);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.tagsContainer {
+  gap: 12px;
+}
+
+.headerRow {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tagsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-grow: 1;
+  min-width: 0;
+  margin-bottom: 8px;
+}
+
+.editButtonContainer {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.noTagsMessage {
+  color: var(--Neutrals-Medium-Text);
+  font-style: italic;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Popup styles */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContainer {
+  background-color: var(--Neutrals-Background, #fffbf4);
+  padding: 32px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.popupContainer h2, 
+.popupContainer h3 {
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.popupDescription {
+  color: var(--Blue-Perfect);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.uploadInstructions {
+  color: var(--Neutrals-Medium-Text, #837468);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.popupContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadArea {
+  margin-bottom: 24px;
+}
+
+.uploadButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--Neutrals-Light-Outline, #d5c3b5);
+  color: var(--Neutrals-Black-Text, #221a14);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.uploadButton:hover {
+  background-color: var(--Neutrals-Medium-Outline, #c0b0a3);
+}
+
+.previewContainer {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+}
+
+.previewContainer img {
+  border: none !important;
+}
+
+.coverRemoveButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white !important;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black !important;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.coverRemoveButton:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.fileUploadWarning {
+  color: #ff9800;
+  background: rgba(255, 244, 229, 0.9);
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 8px 0;
+  font-size: 14px;
+  animation: pulse 2s infinite;
+}
+
+.fileUploadError {
+  color: var(--Error-Red, #d70000);
+  background-color: rgba(215, 0, 0, 0.1);
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 8px 0;
+  font-size: 14px;
+  border: 1px solid rgba(215, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.popupButtons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.popupCancelButton {
+  flex: 1;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  transition: all 0.2s ease;
+}
+
+.popupCancelButton:hover {
+  background: #e0e0e0;
+}
+
+.popupConfirmButton {
+  flex: 1;
+  background: linear-gradient(268deg, rgb(37, 63, 59) 23.52%, rgb(92, 156, 146) 136.03%);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  transition: all 0.2s ease;
+}
+
+.popupConfirmButton:hover {
+  opacity: 0.9;
+}
+
+.popupConfirmButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.uploadCoverButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--Neutrals-Black-Text);
+  color: var(--Neutrals-Background);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.uploadCoverButton:hover {
+  background: var(--Neutrals-Dark-Outline);
+}
+
+.notificationContainer {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 90%;
+  max-width: 500px;
+  animation: fadeOut 5s forwards;
+}
+
+/* Destinations Section */
+/* Destinations Timeline - Fixed Version */
+.destinationsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: calc(100% - 20px);
+}
+
+.timelineLine {
+  position: absolute;
+  left: 30px; /* Adjusted to match the timelineColumn width */
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: black;
+  z-index: 1;
+}
+
+.destinationWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  padding-left: 60px; /* Creates space for timeline elements */
+}
+
+.timelineColumn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dayNumber {
+  width: 4rem; /* Adjust width as needed */
+  height: 2rem;
+  background-color: var(--Green-Perfect);
+  color: white;
+  font-weight: bold;
+  border-radius: 20px; /* Rounded rectangle corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.destinationTimelineIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+  margin-left: -41px;
+
+}
+
+.destinationCard {
+  flex: 1;
+  background-color: var(--Neutrals-Background);
+  padding: 12px;
+  border: 1px solid var(--Neutrals-Light-Outline);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-left: 0;
+  min-height: auto; /* Remove fixed height */
+  width: 100%; /* Make card take full available width */
+  max-width: 800px; /* Set a maximum width if needed */
+  position: relative;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .destinationWrapper {
+    padding-left: 40px;
+  }
+  
+  .timelineLine {
+    left: 20px;
+  }
+  
+  .timelineColumn {
+    width: 40px;
+  }
+  
+  .dayNumber {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.875rem;
+  }
+  
+  .destinationTimelineIcon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .destinationCard {
+    flex-direction: column;
+  }
+  
+  .destinationImage {
+    width: 100%;
+    height: 160px;
+  }
+}
+.destinationImage {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Destination card */
+
+.destinationTimelineIcon svg {
+  color: white;
+  font-size: 14px;
+}
+
+.destinationContent {
+  display: flex;
+  width: 100%;
+}
+
+.destinationImage {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.destinationImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.destinationInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 20;
+}
+
+.destinationName {
+  margin: 0;
+  font-size: 16px; /* Reduced from 18px */
+  font-weight: 700;
+  color: var(--Neutrals-Black-Text);
+  font-family: var(--font-heading);
+  text-align: left;
+  line-height: 1.3;
+}
+/* Rating styles - matches DestinationCard */
+.ratingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced from 8px */
+  padding-left: 5;
+}
+
+.ratingStars {
+  display: flex;
+  gap: 1px; /* Reduced from 2px */
+}
+.starFilled {
+  color: var(--Green-Hover, #5c9c92);
+}
+
+.starEmpty {
+  color: var(--Neutrals-Light-Outline);
+  font-size: 12px;
+}
+
+.reviewsCount {
+  color: var(--Neutrals-Medium-Outline);
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+
+.starHalf {
+  color: var(--Yellow-Perfect, #FFB800);
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.starHalf::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0%, var(--Neutrals-Background) 100%);
+}
+
+/* Compact Meta Row */
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Reduced from 12px */
+  margin-top: 3px;
+  padding-left: 8;
+}
+
+.destinationType {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px; /* Larger text size */
+  font-weight: 500; /* Slightly bolder */
+  color: var(--Neutrals-Black-Text); /* Darker color for better contrast */
+}
+
+.destinationTypeIcon {
+  font-size: 15px !important; /* Smaller icon */
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  color: rgba(0, 0, 0, 0.719);
+}
+/* Ensure icon alignment */
+.destinationType svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.priceRangeTag {
+  font-size: 11px; /* Reduced from 14px */
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+/* Map */
+/* Map Icon Button - Top Right of Card */
+.cardMapIconButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--Neutrals-Light-Outline);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+.cardMapIconButton:hover {
+  background: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardMapIconButton:disabled {
+  background: rgba(255, 255, 255, 0.6);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Make sure cards can contain absolute elements */
+.destinationCard {
+  position: relative; /* Add this if not already present */
+}
+/* Sticky Map Viewer (under Contributors) */
+.stickyMapContainer {
+  position: sticky;
+  top: 100px; /* This is essential for sticky positioning */
+  height: 450px; /* Increased from 400px */
+  width: 100%; /* Added to control width */
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--Neutrals-Light-Outline);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: white;
+  margin: 0; /* Remove all margins */
+}
+.stickyMapContainer {
+  margin-bottom: 0 !important; /* Remove bottom margin */
+  padding-bottom: 0 !important; /* Remove padding */
+}
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .stickyMapContainer {
+    height: 350px; /* Increased from 300px */
+    top: 20px; /* Reduced from 80px */
+    width: 95%; /* Slightly narrower on mobile */
+  }
+}
+/* Map Zoom Controls */
+.stickyMapContainer .mapZoomControls {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+.stickyMapContainer .mapZoomButton {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.stickyMapContainer .mapZoomButton:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Custom Marker Style */
+.stickyMapContainer .customMarker {
+  width: 24px;
+  height: 24px;
+  background-color: var(--Green-Perfect);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Map Popup Style */
+.stickyMapContainer .mapPopup {
+  font-family: var(--font-body), system-ui, sans-serif;
+  padding: 12px;
+  font-size: 14px;
+  max-width: 200px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .stickyMapContainer {
+    height: 300px;
+    top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  /* ... your existing mobile styles ... */
+  
+  .cardMapIconButton {
+    width: 28px;
+    height: 28px;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .stickyMapContainer {
+    height: 300px;
+    top: 80px;
+  }
+}
+/* Add to your z-index declarations */
+.destinationCard { z-index: 1; }
+.cardMapIconButton { z-index: 2; }
+.stickyMapContainer { z-index: 5; }
+.cardMapIconButton {
+  z-index: 3; /* Higher than other elements */
+}
+.destinationContent {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--Neutrals-Light-Outline);
+  margin: 16px 0;
+  border: none;
+}
+
+/* ///////////////// */
+/* Slider Styles */
+.sliderSection {
+  overflow: hidden;
+  padding: 28px 32px !important; /* Match section padding */
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 24px; /* Container rounded corners */
+  background: #f5f5f5;
+  margin-top: 16px;
+}
+
+.slideImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+}
+
+
+.sliderTrack {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide:first-child .slideImage {
+  border-radius: 0 !important; /* Fully square for first image's top */
+}
+
+.sliderDots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  background: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sliderContainer {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderContainer {
+    height: 250px;
+  }
+}
+/* Add this new class matching your desired black button style */
+.editDestinationsButton {
+  background: var(--Neutrals-Black-Text, #221a14);
+  height: 32px;
+  color: var(--Neutrals-Background, #fffbf4);
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 20px;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-weight: 400;
+  transition: background 0.2s ease-in-out;
+}
+
+.editDestinationsButton:hover {
+  background: var(--Neutrals-Dark-Outline, #2d2d2d);
+}
+
+/* Menu Button Styles */
+.coverMenuButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.2s ease;
+}
+
+.coverMenuButton:hover {
+  background: white;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coverMenuButton svg {
+  color: var(--Neutrals-Black-Text);
+  font-size: 20px;
+}
+/* Menu Dropdown Styles */
+.menuPaper {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  min-width: 180px !important;
+  padding: 4px 0 !important;
+}
+
+.menuItem {
+  font-family: var(--font-body), system-ui, sans-serif !important;
+  font-size: 14px !important;
+  padding: 8px 16px !important;
+  color: var(--Neutrals-Black-Text) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.menuItem:hover {
+  background-color: var(--Neutrals-Light-Outline) !important;
+}
+
+.menuItem svg {
+  font-size: 18px !important;
+  color: var(--Neutrals-Medium-Text) !important;
+}
+
+/* Danger item (for delete) */
+.menuItemDanger {
+  color: var(--Error-Red) !important;
+}
+
+.menuItemDanger:hover {
+  background-color: rgba(215, 0, 0, 0.08) !important;
+}
+
+.menuItemDanger svg {
+  color: var(--Error-Red) !important;
+}

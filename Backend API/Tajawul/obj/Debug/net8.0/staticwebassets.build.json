@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "ggHqtQO/W7QNWXB11LP9bQGwytm+n5rdbFRjkidBU+4=",
+  "Source": "Tajawul",
+  "BasePath": "_content/Tajawul",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Tajawul\\wwwroot",
+      "Source": "Tajawul",
+      "ContentRoot": "C:\\Users\\WHOAMI\\source\\repos\\Tajawul\\Tajawul\\wwwroot\\",
+      "BasePath": "_content/Tajawul",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\WHOAMI\\source\\repos\\Tajawul\\Tajawul\\wwwroot\\ProfileImages\\7b22f9fd-b655-4508-bd8a-72346b83ed3d.jpg",
+      "SourceId": "Tajawul",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\WHOAMI\\source\\repos\\Tajawul\\Tajawul\\wwwroot\\",
+      "BasePath": "_content/Tajawul",
+      "RelativePath": "ProfileImages/7b22f9fd-b655-4508-bd8a-72346b83ed3d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ProfileImages\\7b22f9fd-b655-4508-bd8a-72346b83ed3d.jpg"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+.questionContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Default size styles */
+.questionContainer.default {
+  margin: 28px 0px;
+}
+
+.questionContainer.default .question {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.questionContainer.default .optionsContainer {
+  gap: 12px;
+}
+
+.questionContainer.default .optionButton {
+  padding: 8px 20px;
+  font-size: 16px;
+  border-radius: 24px;
+  position: relative; /* Added for close icon positioning */
+}
+
+/* Small size styles */
+.questionContainer.small {
+  margin: 12px 0px;
+}
+
+.questionContainer.small .question {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.questionContainer.small .optionsContainer {
+  gap: 8px;
+}
+
+.questionContainer.small .optionButton {
+  padding: 4px 12px 4px 12px; /* Right padding increased */
+  font-size: 14px;
+  border-radius: 16px;
+  color: var(--Neutrals-Medium-Outline);
+  position: relative; /* Added for close icon positioning */
+}
+
+.questionContainer.small .optionButton:hover {
+  background-color: var(--Green-Very-Bright);
+  color: var(--Green-Dark);
+  border: 1px solid var(--Green-Hover);
+}
+
+.questionContainer.small .optionButton.selected {
+  background-color: var(--Green-Hover);
+  color: var(--Neutrals-Background);
+  border: 1px solid var(--Green-Hover);
+  padding-right: 28px; /* Make space for close icon */
+}
+
+/* Common styles */
+.question {
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 700;
+  text-align: left;
+  color: var(--Neutrals-Black-Text, #221a14);
+}
+
+.requiredMark {
+  color: #ef4444;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+.optionsContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.optionsContainer::-webkit-scrollbar-track {
+  background: #daede5;
+  border-radius: 4px;
+}
+
+.optionsContainer::-webkit-scrollbar-thumb {
+  background-color: var(--Green-Hover);
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
+
+.optionsContainer::-webkit-scrollbar-thumb:hover {
+  background-color: var(--Green-Perfect);
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.optionButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--Neutrals-Background);
+  border: 1px solid var(--Neutrals-Light-Outline);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 500;
+  color: var(--Neutrals-Black-Text, #221a14);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.optionButton:hover {
+  background-color: var(--Green-Very-Bright);
+  color: var(--Green-Dark);
+  border: 1px solid var(--Green-Hover);
+}
+
+.optionButton.selected {
+  background-color: var(--Green-Hover);
+  color: var(--Neutrals-Background);
+  border: 1px solid var(--Green-Hover);
+  padding-right: 28px; /* Make space for close icon */
+}
+
+.optionButton:disabled {
+  background-color: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+  border: 1px solid #ccc;
+}
+
+/* Close icon styles */
+.optionButton.selected .closeIcon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.optionButton.selected .closeIcon svg {
+  font-size: 14px;
+  color: var(--Neutrals-Background);
+  transition: color 0.2s ease;
+}
+
+.optionButton.selected .closeIcon svg:hover {
+  color: var(--Green-Dark);
+}
+
+/* Deleted tag styles */
+.optionButton.deleted {
+  background-color: var(--Neutrals-Background);
+  border: 1px solid var(--Neutrals-Light-Outline);
+  color: var(--Neutrals-Medium-Outline);
+}
+
+.optionButton.deleted:hover {
+  opacity: 1;
+  background-color: var(--Green-Very-Bright);
+  color: var(--Green-Dark);
+  border: 1px solid var(--Green-Hover);
+}
+
+.selectedSection {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.unselectedSection {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Make the divider match the component's style */
+.divider {
+  border-color: var(--Neutrals-Light-Outline);
+}
+
+.descriptionContainer {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.description {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem; /* Equivalent to text-sm */
+  font-weight: 400;
+  color: var(--Neutrals-Medium-Outline); /* Equivalent to text-slate-200 */
+  display: block;
+  margin-top: 2px;
+}
+
+/* Add to existing styles */
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.selectionLimitMessage {
+  display: block;
+  color: var(--Mid-Stroke);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Add these to your existing CSS */
+.addNewButton {
+  border: 1px dashed var(--Neutrals-Medium-Outline) !important;
+}
+
+.addNewButton:hover {
+  background-color: var(--Green-Very-Bright) !important;
+  color: var(--Green-Dark) !important;
+  border: 1px dashed var(--Green-Hover) !important;
+}
+
+.inputWithButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addNewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.addNewInput {
+  align-items: center;
+  background-color: var(--Neutrals-Background);
+  border: 1px solid var(--Neutrals-Black-Text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 500;
+  color: var(--Neutrals-Black-Text, #221a14);
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 14px;
+  position: relative;
+}
+
+.addNewInput:focus {
+  outline: none;
+  border-color: var(--Green-Hover);
+}
+
+.addButton,
+.cancelButton {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: var(--Neutrals-Background);
+  border: 1px solid var(--Neutrals-Black-Text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 500;
+  color: var(--Neutrals-Black-Text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.addButton:hover {
+  background-color: var(--Green-Very-Bright);
+  color: var(--Green-Dark);
+  border: 1px solid var(--Green-Hover);
+}
+
+.cancelButton:hover {
+  background-color: var(--Error-Background);
+  color: var(--Error-Text);
+  border: 1px solid var(--Error-Text);
+}

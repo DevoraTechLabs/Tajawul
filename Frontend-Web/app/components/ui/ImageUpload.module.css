@@ -1,0 +1,337 @@
+/* 🔹 Main Container */
+.fileUploadContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* 🔹 Label */
+.fileUploadLabel {
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.requiredMark {
+  color: #ef4444;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* 🔹 Description */
+.fileUploadDescription {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--Neutrals-Medium-Outline);
+  display: block;
+  margin-top: 2px;
+}
+
+/* 🔹 File Upload Wrapper */
+.fileUploadWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* 🔹 File Input (Hidden) */
+.fileInput {
+  display: none;
+}
+
+/* 🔹 File Upload Button */
+.fileUploadButton {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 12px;
+  background: var(--Neutrals-Black-Text);
+  color: var(--Neutrals-Background);
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.fileUploadButton:hover {
+  background: var(--Neutrals-Medium-Outline);
+}
+
+.fileUploadButton:disabled {
+  background: #f0f0f0;
+  border-color: #ccc;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* 🔹 File Name Display */
+.fileName {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--Neutrals-Medium-Outline);
+  flex-grow: 1;
+}
+
+/* 🔹 Error Message */
+.fileUploadError {
+  text-align: left;
+  min-height: 16px;
+  margin-top: 2px;
+  font-size: 0.875rem;
+  color: #ef4444;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.previewContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/* 🔹 Image Preview */
+.imagePreview {
+  margin-top: 12px;
+
+  position: relative;
+  overflow: hidden; /* Ensure the image doesn't overflow the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  object-fit: cover;
+  width: 300px; /* Fixed width for the preview container */
+  height: 300px; /* Fixed height for the preview container */
+  border-radius: 50%; /* Make the container circular */
+}
+
+/* 🔹 Remove Button */
+.removeButton {
+  z-index: 2;
+  position: absolute;
+  top: 30px;
+  right: 26px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.removeButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.removeButton svg {
+  color: var(--Neutrals-Background);
+  font-size: 18px;
+}
+
+/* 🔹 Cover Preview */
+.coverPreview {
+  margin-top: 18px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+
+.coverImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* 🔹 Image List Preview */
+.imageListPreview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.imageListItem {
+  position: relative;
+  width: 178px;
+  height: 110px;
+  cursor: pointer;
+  overflow: hidden; /* Ensure the remove button doesn't overflow */
+}
+
+.imageListImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* 🔹 Popup Overlay */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 🔹 Popup Container */
+.popupContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* 🔹 Popup Image */
+.popupImage {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* 🔹 Popup Close Button */
+.popupCloseButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: var(--Neutrals-Background);
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.popupCloseButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* 🔹 Popup Arrows */
+.popupArrowLeft,
+.popupArrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--Neutrals-Background, #fffbf4);
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.popupArrowLeft {
+  left: 8px;
+}
+
+.popupArrowLeft svg {
+  transform: rotate(180deg); /* Rotate the icon inside the left arrow */
+}
+
+.popupArrowRight {
+  right: 8px;
+}
+
+.popupArrowLeft:hover,
+.popupArrowRight:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* 🔹 Remove Button */
+.coverRemoveButton {
+  z-index: 2;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.coverRemoveButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.coverRemoveButton svg {
+  color: var(--Neutrals-Background);
+  font-size: 20px;
+}
+
+/* 🔹 Remove Button (Hidden by default, shown on hover) */
+.listRemoveButton {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0; /* Hidden by default */
+  transition: background 0.2s ease-in-out;
+}
+
+.imageListItem:hover .listRemoveButton {
+  opacity: 1; /* Show on hover */
+}
+
+.listRemoveButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.listRemoveButton svg {
+  color: var(--Neutrals-Background);
+  font-size: 16px;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVtXL2YdVEE2+cFRl/UjOBwAAAAACAAAAAAAQZgAAAAEAACAAAACUBEEABBeuAPn+NHiaMANQ5/9LGLtbgo6xKXe++Q4AsAAAAAAOgAAAAAIAACAAAABbv2kuYv2sDCQl0DJJyQkClLm8Zzhz5wH7E30z1WqF5CAAAADGTLRv0Ny9Y0vgEUtwN8Ug7hp2cdm8qyJ8gAX0adXSAEAAAADmkwLHHSTjW1+rQcd3EL7vmMrcx7rrbaP7v19HcqOdd0eWZyfvBxXd6FXzL8FnYkudtn7Rs7bNwkZhAz/S89wg</EncryptedPassword>
+    <History>False|2025-03-12T01:04:37.2328995Z||;False|2025-03-12T03:01:22.7943930+02:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=tajawuldbserver.database.windows.net,1433;Initial Catalog=Tajawul_db;User ID=tajawul;Password=Team222000" />
+    <AzureDBConnectionStrings Include="REDACTED" />
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Tajawul.Data.Db14639Context">
+      <Value>Data Source=tajawuldbserver.database.windows.net,1433%3bInitial Catalog=Tajawul_db%3bUser ID=tajawul%3bPassword=Team222000</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

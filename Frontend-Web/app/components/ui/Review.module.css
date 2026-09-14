@@ -1,0 +1,49 @@
+.reviewContainer {
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: var(--Neutrals-Background);
+  border: 1px solid var(--Neutrals-Light-Outline);
+  width: 100%;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.userDetails {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-weight: 600;
+  color: var(--Neutrals-Dark-Text);
+  text-align: left;
+}
+
+.reviewDate {
+  font-size: 0.8rem;
+  color: var(--Neutrals-Medium-Text);
+  text-align: left;
+}
+
+.ratingContainer {
+  margin-bottom: 8px;
+}
+
+.reviewComment {
+  color: var(--Neutrals-Dark-Text);
+  line-height: 1.5;
+  text-align: left;
+}

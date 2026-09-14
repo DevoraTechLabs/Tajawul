@@ -1,0 +1,226 @@
+/* 🔹 Main Container */
+.dropdownContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+/* 🔹 Label */
+.dropdownLabel {
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.requiredMark {
+  color: #ef4444;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* 🔹 Description */
+.dropdownDescription {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--Neutrals-Medium-Outline);
+  display: block;
+  margin-top: 2px;
+}
+
+/* 🔹 Search Input (Inside Dropdown) */
+.searchInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 14px;
+  background: transparent;
+  cursor: text;
+}
+
+.searchInput:disabled {
+  background: transparent;
+  cursor: not-allowed;
+  color: #aaa;
+}
+
+.noResults {
+  color: var(--Neutrals-Medium-Outline);
+}
+
+/* 🔹 Dropdown Wrapper (Clickable) */
+.dropdownWrapper {
+  position: relative;
+  width: 100%;
+  height: 46px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.dropdownWrapper:hover {
+  border-color: var(--Neutrals-Black-Text);
+}
+
+/* 🔹 When Active */
+.dropdownWrapper.active {
+  border: 2px solid var(--Neutrals-Black-Text);
+}
+
+/* 🔹 Selected Value */
+.selectedValue {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--Neutrals-Black-Text);
+}
+
+/* 🔹 Dropdown Icon */
+.dropdownIcon {
+  transition: transform 0.3s ease-in-out;
+  color: var(--Neutrals-Medium-Outline);
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+/* 🔹 Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+  z-index: 100;
+  overflow-y: auto; /* ✅ Enables vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-height: 160px; /* ✅ Restricts dropdown height */
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdownMenu div {
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+/* ✅ Optional: Customize the scrollbar */
+.dropdownMenu::-webkit-scrollbar {
+  width: 10px; /* Thin scrollbar */
+}
+
+.dropdownMenu::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+  margin: 6px 0;
+}
+
+.dropdownMenu::-webkit-scrollbar-thumb {
+  background-color: var(--Green-Hover);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.dropdownMenu::-webkit-scrollbar-thumb:hover {
+  background-color: var(--Green-Perfect);
+}
+
+/* 🔹 Dropdown Item */
+.dropdownItem {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  color: var(--Neutrals-Medium-Outline);
+  border: 1px solid #ffff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdownItem:hover {
+  background: var(--Beige-Very-Bright);
+  color: var(--Neutrals-Black-Text);
+  border: 1px solid var(--Neutrals-Light-Outline);
+}
+
+/* 🔹 Error Message */
+.dropdownError {
+  text-align: left;
+  min-height: 16px;
+  margin-top: 2px;
+  font-size: 0.875rem;
+  color: #ef4444;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Style for Disabled Dropdown */
+.dropdownWrapper.disabled {
+  background: #f0f0f0; /* Light gray background */
+  border: 1px solid #ccc; /* Gray border */
+  color: #aaa; /* Dimmed text */
+  cursor: not-allowed;
+}
+
+/* 🔹 Prevent Hover Effect on Disabled Dropdown */
+.dropdownWrapper.disabled:hover {
+  border-color: #ccc !important; /* Ensures it overrides any hover effect */
+  cursor: not-allowed;
+}
+
+/* 🔹 Selected Options Container */
+.selectedOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  top: 100%;
+}
+
+/* 🔹 Selected Option */
+.selectedOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--Green-Very-Bright);
+  color: var(--Green-Dark);
+  border-radius: 38px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* 🔹 Remove Icon */
+.removeIcon {
+  cursor: pointer;
+  color: var(--Green-Dark);
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+.removeIcon:hover {
+  color: var(--Neutrals-Black-Text);
+}

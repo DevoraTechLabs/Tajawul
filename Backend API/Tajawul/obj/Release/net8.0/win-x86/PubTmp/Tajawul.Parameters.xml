@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Tajawul" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\WHOAMI\\source\\repos\\Tajawul\\Tajawul\\obj\\Release\\net8\.0\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="Tajawul.Data.Db14639Context" description="" value="Data Source=tajawuldbserver.database.windows.net,1433;Initial Catalog=Tajawul_db;User ID=tajawul;Password=Team222000" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\WHOAMI\\source\\repos\\Tajawul\\Tajawul\\obj\\Release\\net8\.0\\win-x86\\PubTmp\\EFSQLScripts\\Tajawul\.Data\.Db14639Context\.sql$" />
+  </parameter>
+</parameters>

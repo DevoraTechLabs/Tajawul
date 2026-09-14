@@ -1,0 +1,79 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+.primary {
+  background: var(--Neutrals-Black-Text, #221a14);
+  color: var(--Beige-Perfect, #f3ddbb);
+}
+
+.primary:hover {
+  background: var(--Green-Hover);
+  color: var(--Neutrals-Background);
+}
+
+.secondary {
+  border: 1px solid var(--Neutrals-Medium-Outline, #837468);
+  background: transparent;
+  color: var(--Neutrals-Black-Text);
+}
+
+.secondary:hover {
+  background: var(--Beige-Very-Bright);
+  color: var(--Neutrals-Black-Text);
+}
+
+.gradient {
+  background: var(
+    --Gradient-Default,
+    linear-gradient(268deg, #253f3b 23.52%, #5c9c92 136.03%)
+  );
+  color: var(--Neutrals-Background);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, #253f3b -25.25%, #5c9c92 99.99%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: -1;
+}
+
+.gradient:hover::before {
+  opacity: 1;
+}
+
+.px14 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+  height: 32px;
+  padding: 5px 24px;
+  border-radius: 38px;
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+.px16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  height: 46px;
+  padding: 16px 32px;
+  border-radius: 24px;
+  font-family: var(--font-heading), Georgia, serif;
+}

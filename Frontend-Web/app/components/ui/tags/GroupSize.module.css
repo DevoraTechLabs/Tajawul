@@ -1,0 +1,29 @@
+.groupSizeContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  display: flex;
+  height: 30px;
+  padding: 6px 14px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 38px;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--Blue-Very-Bright);
+  border: 1px solid var(--Blue-Perfect);
+  background: var(--Blue-Dark);
+}
+
+.iconTextWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

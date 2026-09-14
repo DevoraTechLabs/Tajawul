@@ -1,0 +1,67 @@
+.textareaContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 250px;
+  margin-bottom: 12px;
+}
+
+.textareaLabel {
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+.requiredMark {
+  color: #ef4444;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.textareaDescription {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--Neutrals-Medium-Outline);
+  display: block;
+  margin-top: 2px;
+}
+
+.textareaField {
+  font-family: var(--font-body), system-ui, sans-serif;
+  margin-top: 2px;
+  width: 100%;
+  display: flex;
+  min-height: 120px; /* Default height */
+  max-height: 300px; /* Prevents excessive expansion */
+  padding: 12px 16px;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  transition: border-color 0.2s ease;
+  resize: vertical; /* Allows users to resize */
+  overflow-y: auto;
+  line-height: 1.4;
+}
+
+.textareaField:hover {
+  border-color: var(--Neutrals-Black-Text, #221a14);
+}
+
+.textareaField.error {
+  border-color: #ef4444;
+}
+
+.textareaError {
+  text-align: left;
+  min-height: 16px;
+  margin-top: 2px;
+  font-size: 0.875rem;
+  color: #ef4444;
+  font-family: var(--font-body), system-ui, sans-serif;
+}

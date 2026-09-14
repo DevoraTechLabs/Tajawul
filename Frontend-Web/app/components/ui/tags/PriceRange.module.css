@@ -1,0 +1,49 @@
+.priceRangeContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.priceRange {
+  display: flex;
+  height: 30px;
+  padding: 6px 14px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 38px;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+}
+
+/* Low */
+.low {
+  color: var(--Low-Text) !important;
+  border: 1px solid var(--Low-Stroke) !important;
+  background: var(--Low-Background) !important;
+}
+
+/* Mid-Range */
+.mid {
+  color: var(--Mid-Text) !important;
+  border: 1px solid var(--Mid-Stroke) !important;
+  background: var(--Mid-Background) !important;
+}
+
+/* Luxury */
+.luxury {
+  border: 1px solid var(--Luxury-Stroke) !important;
+  background: var(--Luxury-Background) !important;
+  box-shadow: 0 0 8px 4px rgba(255, 229, 151, 0.7);
+}
+
+/* Fallback for gradient text (if needed) */
+.luxury span {
+  background: -webkit-linear-gradient(-93deg, #ffebae -8.59%, #e0b919 124.74%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,86 @@
+.exploreContainer {
+  width: 100vw;
+  margin-top: 60px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchSection {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  padding: 0 5%;
+  height: 120px;
+  align-items: center;
+  border-bottom: 1px solid var(--Neutrals-Light-Outline);
+}
+
+.searchSection h1 {
+  font-size: 48px;
+}
+
+.filterSection {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 0 5%;
+  gap: 18px;
+}
+
+.filterControls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  min-width: 0; /* Allows flex items to shrink below their content size */
+}
+
+.countriesWrapper {
+  flex: 2; /* Takes more space than other controls */
+  min-width: 0; /* Important for text truncation */
+  overflow: hidden;
+}
+
+.filterButton,
+.sortSection,
+.typeButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: var(--Neutrals-Black-Text);
+  background-color: var(--Neutrals-Background);
+  border: 1px solid var(--Neutrals-Light-Outline);
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.typeButton:hover {
+  background-color: var(--Neutrals-Medium-Outline);
+}
+
+.filterButton:hover,
+.sortSection:hover {
+  background-color: var(--Beige-Very-Bright);
+}
+
+.destinationContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2% 0 3.5%;
+  gap: max(18px, 2vw);
+}

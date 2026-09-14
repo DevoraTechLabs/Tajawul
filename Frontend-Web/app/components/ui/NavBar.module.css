@@ -1,0 +1,183 @@
+.navBar {
+  position: fixed; /* Keeps navbar above content */
+  top: 0;
+  left: 0; /* Ensures it starts from the left edge */
+  width: 100vw; /* Makes it take the full width */
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-shrink: 0;
+  border: 1.5px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  background: #f0dcbeeb;
+  backdrop-filter: blur(4px);
+  box-shadow: 0px 1px 8px 0px rgba(38, 29, 28, 0.15);
+  z-index: 1000; /* Ensures navbar stays on top */
+  justify-content: space-evenly;
+}
+
+/* 🔹 General Navigation Item */
+.navItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  height: 60px;
+  transition: color 0.3s ease;
+}
+
+.homeItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.dropItem {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  height: 70px;
+}
+
+.navItem:hover {
+  color: var(--Green-Hover);
+}
+
+.navItem.active {
+  color: var(--Green-Hover);
+  border-bottom: var(--Green-Hover) 2px solid;
+}
+
+/* 🔹 Fix Arrow Rotation Issue */
+.dropdownContainer .arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+/* 🔹 Keep Arrow Rotated When Dropdown is Open */
+.dropdownContainer:hover .arrowIcon {
+  transform: rotate(180deg);
+}
+
+.loginFrame {
+  display: flex;
+  padding: 14px 17px;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoTransFrame {
+  display: flex;
+  padding: 14px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.profileFrame {
+  display: flex;
+  width: 222px;
+  padding: 14px 17px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.avatarButton {
+  background-color: transparent;
+  border: none;
+  height: 70px;
+}
+
+/* 🔹 Dropdown Container */
+.dropdownContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdownContainer:hover .dropdownMenu,
+.dropdownContainer:hover .dropdownMenuAvatar {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔹 Dropdown Menu Styling */
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--Beige-Perfect, #f3ddbb);
+  border: 1px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 180px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  text-align: left;
+}
+
+/* 🔹 Dropdown Menu for Avatar */
+.dropdownMenuAvatar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--Beige-Perfect, #f3ddbb);
+  border: 1px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 140px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  text-align: left;
+}
+
+/* 🔹 Dropdown Items */
+.dropdownItem {
+  padding: 10px 15px;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Neutrals-Black-Text, #221a14);
+  text-decoration: none;
+  transition: background 0.2s ease-in-out;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+
+.dropdownItem:hover {
+  background: var(--Beige-Hover);
+}

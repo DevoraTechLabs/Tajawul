@@ -1,0 +1,212 @@
+.searchContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  border: 1px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  background: var(--Neutrals-Background, #fffbf4);
+  box-shadow: 0px 0px 24px 0px rgba(38, 29, 28, 0.15);
+  border-radius: 40px;
+  color: var(--Neutrals-Black-Text, #221a14);
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.searchInput::placeholder {
+  color: var(--Neutrals-Medium-Outline, #837468);
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.searchInput:focus {
+  outline: none;
+  border: 1px solid var(--Green-Hover);
+  box-shadow: 0px 0px 24px 0px rgba(38, 29, 28, 0.15);
+}
+
+.searchInputLarge {
+  padding: 5.5px 8px 5.5px 50px;
+  font-size: 20px;
+  border-radius: 60px;
+  height: 60px;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  transform: translateY(-50%);
+  background: var(
+    --Gradient-Default,
+    linear-gradient(268deg, #253f3b 23.52%, #5c9c92 136.03%)
+  );
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Neutrals-Background);
+  padding: 14px;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  background: var(--Neutrals-Background, #fffbf4);
+  box-shadow: 0px 0px 24px 0px rgba(38, 29, 28, 0.15);
+  border-radius: 24px;
+  padding: 1rem 0;
+  z-index: 1000;
+  margin-top: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+.searchResults::-webkit-scrollbar {
+  width: 10px;
+}
+
+.searchResults::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+
+.searchResults::-webkit-scrollbar-thumb {
+  background-color: var(--Green-Hover);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.searchResults::-webkit-scrollbar-thumb:hover {
+  background-color: var(--Green-Perfect);
+}
+
+.section {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.section li {
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  color: var(--Neutrals-Black-Text, #221a14);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.section li:hover {
+  background: var(--Beige-Very-Bright);
+  font-weight: 600;
+}
+
+.section li:last-child {
+  border-bottom: none;
+}
+
+/* Add these new styles */
+.resultsHeader {
+  border-bottom: 1px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  margin-bottom: 1rem;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+.filterTab {
+  background: none;
+  border: none;
+  padding: 0.5rem 0;
+  font-size: 16px;
+  color: var(--Neutrals-Medium-Outline, #837468);
+  cursor: pointer;
+  font-family: var(--font-body);
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.filterTab:hover {
+  color: var(--Neutrals-Black-Text, #221a14);
+}
+
+.filterTab.active {
+  color: var(--Green-Perfect);
+  font-weight: 500;
+}
+
+.filterTab.active span {
+  background-color: var(--Green-Very-Bright);
+}
+
+.filterTab.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--Green-Perfect);
+}
+
+.filterTab span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--Beige-Hover);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.resultContent {
+  flex: 1;
+}
+
+.typeTag {
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 1rem;
+}

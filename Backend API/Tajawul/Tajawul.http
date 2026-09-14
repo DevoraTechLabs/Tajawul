@@ -1,0 +1,6 @@
+@Tajawul_HostAddress = http://localhost:5029
+
+GET {{Tajawul_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

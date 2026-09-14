@@ -1,0 +1,92 @@
+.progressContainer {
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 56px;
+  position: relative;
+  width: 100%;
+}
+
+.stepWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 80px;
+}
+
+.step {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  background: var(--Neutrals-Light-Outline);
+  color: var(--Beige-Very-Bright);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.step:hover {
+  background: var(--Neutrals-Medium-Outline);
+  color: var(--Neutrals-Background);
+}
+
+.active {
+  position: relative;
+  background-color: var(--Neutrals-Black-Text);
+  color: var(--Neutrals-Background);
+}
+
+.active::before {
+  display: flex;
+  content: "";
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 54px; /* Circle width + 2 * spacing */
+  height: 54px; /* Circle height + 2 * spacing */
+  border-radius: 50%;
+  border: 2px solid var(--Neutrals-Black-Text); /* Outer border color */
+  background: var(--Neutrals-Background);
+  z-index: -1;
+}
+
+.completed {
+  background: var(--Green-Hover);
+  border: none;
+  color: var(--Neutrals-Background);
+}
+
+.stepLabel {
+  width: 80px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: var(--Neutrals-Medium-Outline);
+}
+
+.activeLabel {
+  color: var(
+    --Neutrals-Black-Text
+  ); /* Change this to your desired active label color */
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.line {
+  height: 4px;
+  flex: 1;
+  align-self: center;
+}
+
+.labelsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50px; /* Adjust this value to control vertical position */
+}

@@ -1,0 +1,3 @@
+[submodule "recommender_engine"]
+	path = recommender_engine
+	url = https://github.com/Alaaokaly/Tajawul_Features.git

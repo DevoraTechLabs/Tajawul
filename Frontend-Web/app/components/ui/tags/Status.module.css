@@ -1,0 +1,54 @@
+.statusContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  display: flex;
+  height: 30px;
+  padding: 6px 14px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 38px;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.iconTextWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Completed - Green */
+.completed {
+  color: var(--Green-Very-Bright);
+  border: 1px solid var(--Green-Hover);
+  background: var(--Green-Perfect);
+}
+
+/* Canceled - Burgundy */
+.canceled {
+  color: var(--Burgundy-Hover);
+  border: 1px solid var(--Burgundy-Perfect);
+  background: var(--Burgundy-Dark);
+}
+
+/* In Progress - Blue */
+.inProgress {
+  color: var(--Blue-Very-Bright);
+  border: 1px solid var(--Blue-Hover);
+  background: var(--Blue-Perfect);
+}
+
+/* Not Started - Beige */
+.notStarted {
+  color: var(--Brown-Dark);
+  border: 1px solid var(--Brown-Perfect);
+  background: var(--Brown-Very-Bright);
+}

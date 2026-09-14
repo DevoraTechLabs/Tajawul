@@ -1,0 +1,716 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  align-items: stretch; /* Ensures both columns stay equal */
+  flex-wrap: wrap;
+  z-index: 0;
+}
+
+.frameBackground {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  z-index: -1;
+}
+
+.svgPattern {
+  position: absolute; /* Positions it relative to the parent */
+  max-width: 550px;
+  bottom: 0;
+  left: 0;
+  z-index: -2; /* Keeps it behind all content */
+  pointer-events: none; /* Avoids interference with clicks */
+  opacity: 0.4;
+  transform: scaleX(-1);
+}
+
+.formFrame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 720px; /* Adjust based on your design */
+  min-width: 380px; /* Ensures it doesn't shrink too much */
+  margin: 0 auto; /* Centers content horizontally */
+  padding: 48px 82px;
+  border-radius: 24px;
+  border: 1.5px solid var(--Neutrals-Light-Outline, #d5c3b5);
+  background: var(--Neutrals-Background);
+  box-shadow: 0px 4px 10px 0px rgba(34, 26, 20, 0.15);
+  z-index: 2;
+  margin-top: 100px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.formWidth {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.title {
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 45px */
+  text-transform: capitalize;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  text-align: left;
+  color: var(--Neutrals-Dark-Outline, #2d2d2d);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 17.5px */
+  text-transform: capitalize;
+  color: var(--Neutrals-Black-Text, #221a14);
+}
+
+.subheader {
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  color: var(--Green-Perfect);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.formRow {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  flex-direction: row;
+}
+
+.genderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.label {
+  color: var(--Neutrals-Black-Text, #221a14);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  width: 100%;
+  text-align: left;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.backButton {
+  display: flex;
+  height: 46px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: var(--Neutrals-Black-Text);
+  color: var(--Neutrals-Background);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: 0.32px;
+  width: 100%;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submitButton {
+  display: flex;
+  height: 46px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: linear-gradient(268deg, #253f3b 23.52%, #5c9c92 136.03%);
+  color: var(--Neutrals-Background, #fffbf4);
+  font-family: Merriweather;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: 0.32px;
+  width: 100%;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submitButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, #253f3b -25.25%, #5c9c92 99.99%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: -1;
+}
+
+.submitButton:hover::before {
+  opacity: 1;
+}
+
+.contactButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.addButton {
+  display: flex;
+  border: none;
+  font-family: var(--font-body), system-ui, sans-serif;
+  height: 38px;
+  padding: 16px 20px;
+  align-items: center;
+  border-radius: 24px;
+  border: 1px solid var(--Green-Hover);
+  background: var(--Green-Very-Bright);
+  color: var(--Green-Perfect);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.addButton:hover {
+  border: 1px solid var(--Green-Hover);
+  background: var(--Green-Hover);
+  color: var(--Neutrals-Background);
+}
+
+.contactInput {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.removeButton {
+  display: flex;
+  border: none;
+  font-family: var(--font-body), system-ui, sans-serif;
+  height: 48px;
+  padding: 16px 20px;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid var(--Neutrals-Light-Outline);
+  background: var(--Neutrals-Background);
+  color: var(--Neutrals-Medium-Outline);
+  font-weight: 600;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.removeButton:hover {
+  border: 1px solid var(--Error-Text);
+  background: var(--Error-Background);
+  color: var(--Error-Text);
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+/* Hide the default checkbox */
+.checkboxContainer input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--Green-Perfect); /* Customize border color */
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Custom checkmark */
+.checkboxContainer input[type="checkbox"]::before {
+  content: "✔"; /* Unicode checkmark */
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Change appearance when checked */
+.checkboxContainer input[type="checkbox"]:checked {
+  background-color: var(--Green-Perfect); /* Change to desired color */
+  border-color: var(--Green-Perfect);
+}
+
+.checkboxContainer input[type="checkbox"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Style the label */
+.checkboxContainer label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Dark-Gray);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.checkboxContainer input[type="checkbox"]:hover {
+  border-color: var(--Green-Perfect);
+}
+
+/*Upload Destination Images Page*/
+.smallTitle {
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.note {
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  color: var(--Blue-Perfect);
+  font-size: 14px;
+}
+
+.noteContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+/*Popup*/
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popupContent {
+  position: relative;
+  background: var(--Neutrals-Background);
+  padding: 32px 56px;
+  width: 550px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 10000;
+}
+
+.popupContent h2 {
+  font-size: 28px;
+  color: var(--Neutrals-Black-Text, #221a14);
+}
+
+.popupContent p {
+  font-size: 16px;
+  color: var(--Neutrals-Dark-Outline, #2d2d2d);
+  margin-bottom: 16px;
+}
+
+.popupContent .resendButton {
+  color: var(--Green-Hover, #3b655f);
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+}
+
+.popupContent .resendButton:hover {
+  text-decoration: underline;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--Neutrals-Light-Outline);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+  color: var(--Neutrals-Medium-Text);
+}
+
+.subheaderStepOne {
+  width: 100%;
+  font-family: Merriweather;
+  padding: 0px;
+  color: var(--Blue-Dark);
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: -16px;
+  margin-bottom: 4px;
+}
+
+.descriptionStepOne {
+  width: 100%;
+  padding: 0px 10%;
+  color: var(--Blue-Perfect);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.subheaderStepTwo {
+  width: 100%;
+  font-family: Merriweather;
+  padding: 0px;
+  color: var(--Blue-Dark);
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: -16px;
+  margin-bottom: 4px;
+}
+
+.descriptionStepTwo {
+  width: 100%;
+  padding: 0px 10%;
+  color: var(--Blue-Perfect);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Complete Your Profile */
+.ctaButton {
+  display: flex;
+  height: 46px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: linear-gradient(268deg, #253f3b 23.52%, #5c9c92 136.03%);
+  color: var(--Neutrals-Background, #fffbf4);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.32px;
+  width: 100%;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ctaButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, #253f3b -25.25%, #5c9c92 99.99%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: -1;
+}
+
+.ctaButton:hover::before {
+  opacity: 1;
+}
+
+.completedProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.completedText {
+  font-size: 24px;
+  color: var(--Neutrals-Black-Text);
+  font-weight: 700;
+  padding: 0 5rem;
+  line-height: 100%;
+  margin-bottom: 28px;
+}
+
+
+
+
+/* Map Modal Styles */
+.mapModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  /* padding: px; */
+  margin-top: 60px;
+}
+
+.mapModalContent {
+  width: 40%;
+  max-width: 800px;
+  height: 80vh;
+  min-height: 500px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.mapWrapper {
+  flex: 1;
+  position: relative;
+  min-height: 0;
+}
+
+.mapLoading {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.mapboxgl-canvas-container {
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mapboxgl-canvas {
+  transform-origin: center center !important;
+}
+
+.mapboxgl-ctrl {
+  display: none !important;
+}
+
+.coordinatesContainer {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.longitudeField {
+  flex: 0.8; /* 20% narrower than latitude */
+  min-width: 0;
+}
+
+.latitudeField {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Icon Container - Structural Only */
+.mapIconContainer {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  margin-left: 8px;
+  position: relative;
+  top: -9px; /* Vertical adjustment stays in CSS */
+}
+
+/* Custom Marker */
+.customMarker {
+  width: 24px;
+  height: 24px;
+  background-color: var(--Green-Perfect);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.customMarker::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--Green-Perfect);
+}
+
+/* Map Controls Override */
+.mapboxgl-ctrl {
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.mapboxgl-ctrl-geolocate {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+/* Icon Styles - CSS Fallback (will be overridden by component styles) */
+.mapIconButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+@media (max-width: 768px) {
+  .coordinatesContainer {
+    flex-direction: column;
+  }
+  .mapIconContainer {
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+}
+.mapHint {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.9);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #333;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Enhanced marker style */
+.customMarker {
+  width: 24px;
+  height: 24px;
+  background-color: var(--Green-Perfect);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+  /* CloseButton */
+.closeButton {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 1001;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.closeButton:hover {
+  background: rgba(255,255,255,1);
+}

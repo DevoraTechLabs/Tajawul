@@ -1,0 +1,47 @@
+.durationContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  display: flex;
+  height: 30px;
+  padding: 6px 14px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 38px;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.iconTextWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Short Trip - Yellow */
+.short {
+  color: var(--Yellow-Dark);
+  border: 1px solid var(--Yellow-Perfect);
+  background: var(--Yellow-Very-Bright);
+}
+
+/* Mid Trip - Sienna */
+.mid {
+  color: var(--Sienna-Very-Bright);
+  border: 1px solid var(--Sienna-Hover);
+  background: var(--Sienna-Perfect);
+}
+
+/* Long Trip - Blue */
+.long {
+  color: var(--Blue-Very-Bright);
+  border: 1px solid var(--Blue-Hover);
+  background: var(--Blue-Perfect);
+}

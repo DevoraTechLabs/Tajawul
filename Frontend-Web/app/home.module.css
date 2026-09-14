@@ -1,0 +1,233 @@
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.heroSection {
+  width: 100%;
+  height: 95vh; /* Full viewport height */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 16px;
+  z-index: 2; /* Above overlay */
+  color: var(--Neutrals-Background);
+}
+
+.heroContent h1 {
+  text-align: center;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 69.6px */
+  padding: 0;
+}
+
+.heroContent p {
+  text-align: center;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 16px;
+}
+
+/* Content Section */
+.contentSection {
+  width: 100%;
+  min-height: 100vh; /* Adjust as needed */
+  background-color: var(--Neutrals-Background);
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  /* Add any additional styling for your content section */
+}
+
+/* Rounded top border for content section */
+.contentSection::before {
+  content: "";
+  position: absolute;
+  top: -50px; /* Adjust this to control the curve height */
+  left: 0;
+  width: 100%;
+  height: 50px; /* Should match the negative top value */
+  background: var(--Neutrals-Background);
+  border-radius: 120px 120px 0 0;
+}
+
+.sectionBelowImage {
+  position: absolute;
+  top: 680px;
+  width: 100vw;
+  height: 836px;
+  border-radius: 84px 84px 0px 0px;
+  z-index: 2; /* Above overlay */
+  background-color: var(--Neutrals-Background);
+}
+
+/*Popup*/
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popupContent {
+  position: relative;
+  background: var(--Neutrals-Background);
+  padding: 32px 56px;
+  width: 550px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 10000;
+}
+
+.popupContent h2 {
+  font-size: 24px;
+  color: var(--Neutrals-Black-Text, #221a14);
+  padding: 8px 0;
+}
+
+.popupContent p {
+  font-size: 16px;
+  color: var(--Neutrals-Dark-Outline, #2d2d2d);
+  padding: 0 0 8px 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--Neutrals-Light-Outline);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+  color: var(--Neutrals-Medium-Text);
+}
+
+.submitButton {
+  display: flex;
+  height: 46px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: linear-gradient(268deg, #253f3b 23.52%, #5c9c92 136.03%);
+  color: var(--Neutrals-Background, #fffbf4);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.32px;
+  width: 100%;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submitButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, #253f3b -25.25%, #5c9c92 99.99%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: -1;
+}
+
+.submitButton:hover::before {
+  opacity: 1;
+}
+
+.secondaryButton {
+  display: flex;
+  height: 46px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: var(--Neutrals-Background);
+  color: var(--Neutrals-Dark-Outline);
+  border: 1px solid var(--Neutrals-Light-Outline);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.32px;
+  width: 100%;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.secondaryButton:hover {
+  background: var(--Beige-Very-Bright);
+  color: var(--Neutrals-Black-Text);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}

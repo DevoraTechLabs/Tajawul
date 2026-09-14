@@ -1,0 +1,38 @@
+{
+  "name": "tajawul",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mapbox/mapbox-gl-geocoder": "^5.0.3",
+    "@mui/icons-material": "^6.4.2",
+    "@mui/material": "^6.4.2",
+    "@radix-ui/react-navigation-menu": "^1.2.5",
+    "@radix-ui/react-radio-group": "^1.2.3",
+    "@svgr/webpack": "^8.1.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "axios": "^1.7.9",
+    "country-flag-icons": "^1.5.19",
+    "dompurify": "^3.2.4",
+    "framer-motion": "^12.1.0",
+    "lucide-react": "^0.475.0",
+    "mapbox-gl": "^3.12.0",
+    "next": "^15.3.1",
+    "react": "^19.0.0",
+    "react-country-flag": "^3.1.0",
+    "react-day-picker": "^9.5.1",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "react-window": "^1.8.11",
+    "styled-components": "^6.1.19",
+    "zod": "^3.24.2",
+    "zustand": "^5.0.3"
+  }
+}
